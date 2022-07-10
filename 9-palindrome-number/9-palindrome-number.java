@@ -1,11 +1,11 @@
 class Solution {
-    public boolean isPalindrome(int isPalindrome) {
-        String palindromeArray = Integer.toString(isPalindrome);
-        
-        for(int i=0;i<(int)palindromeArray.length()/2;i++){
-           if(palindromeArray.charAt(i) == palindromeArray.charAt(palindromeArray.length()-(1+i))){
-               continue;
-           }else return false;
-        }return true;
+    public boolean isPalindrome(int x) {
+       int reversed =0;
+        if(x<0 || (x != 0 && x% 10 ==0)) return false;
+        while(x > reversed){
+            reversed = reversed*10 + x % 10;
+            x /= 10;
+        }
+        return (x == reversed || x == (reversed/10));
     }
 }
