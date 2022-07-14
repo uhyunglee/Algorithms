@@ -6,9 +6,13 @@ class Solution {
            for(int j=0;j<accounts[i].length;j++){
               sum+=accounts[i][j]; 
            }
-           if(wealth < sum) wealth = sum;
-           sum = 0;
+              if(wealth < sum){
+                  wealth = sum;
+              }else if(wealth == sum){
+                  wealth = sum;
+              }
+               sum = 0;
        }
-       return wealth;
+        return wealth;
     }
 }
