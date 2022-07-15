@@ -4,11 +4,10 @@ class Solution {
         while(num > 1){
             if(num % 2 == 0){
                 num /= 2;
-                count++;
             }else{
                 num -= 1;
-                count++;
             }
+            count++;
         }
         if(num == 1){
             num-= 1;
