@@ -1,2 +1,1 @@
-# LeetCode
-Daily Solve LeetCode Problems 
+# Algorithms Problems 
