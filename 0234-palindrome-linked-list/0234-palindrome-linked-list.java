@@ -23,17 +23,11 @@ class Solution {
         
         if(list.size() == 1) return true;
         
-        while(!list.isEmpty()){
-            if(answer == true && list.size() == 1) return true;
-            if(list.pollLast() == list.pollFirst())
-                answer = true;
-            else {
-                answer = false;
-                break;
-            }
+        while(!list.isEmpty() && list.size() > 1){
+            if(list.pollLast() != list.pollFirst())
+                return false;
         }
-        
-        return answer;
+        return true;
         
     }
 }
